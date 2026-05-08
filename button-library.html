@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Basic - ACT 2</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.bg{
+  position:fixed;
+  inset:0;
+
+  background:url("sunny.jpg.jpg") center/cover no-repeat;
+
+  filter:brightness(0.7);
+
+  z-index:-1;
+}
+
+/* RIGHT PANEL */
+
+.container{
+  position:absolute;
+
+  right:5%;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:420px;
+
+  background:rgba(0,0,0,0.5);
+
+  backdrop-filter:blur(15px);
+
+  padding:30px;
+
+  border-radius:20px;
+
+  color:white;
+
+  box-shadow:0 0 30px rgba(0,0,0,0.6);
+}
+
+/* TEXT */
+
+h1{
+  font-size:42px;
+  font-weight:800;
+}
+
+.subtitle{
+  font-size:16px;
+
+  opacity:0.8;
+
+  margin-bottom:25px;
+}
+
+/* BUTTON SECTIONS */
+
+.section{
+  margin-bottom:20px;
+}
+
+/* BUTTON BASE */
+
+button{
+  cursor:pointer;
+
+  border:none;
+
+  font-size:14px;
+
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease,
+  background 0.3s ease;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* UBER */
+
+.uber{
+  background:black;
+  color:white;
+
+  padding:12px 20px;
+}
+
+.uber:hover{
+
+  opacity:0.9;
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+/* AMAZON */
+
+.amazon{
+  background:rgb(255,216,20);
+
+  padding:10px 40px;
+
+  border-radius:20px;
+}
+
+.amazon:hover{
+
+  background:rgb(245,205,3);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(255, 216, 20, 0.023);
+}
+
+/* GITHUB */
+
+.github{
+  background:rgb(46,164,79);
+
+  color:white;
+
+  padding:10px 20px;
+
+  border-radius:6px;
+}
+
+.github:hover{
+
+  background:rgb(39,137,66);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(46, 164, 79, 0.01);
+}
+
+/* BOOTSTRAP */
+
+.bootstrap-primary{
+  background:rgb(121,82,179);
+
+  color:white;
+
+  padding:10px 20px;
+
+  border-radius:6px;
+
+  margin-right:10px;
+}
+
+.bootstrap-secondary{
+  background:white;
+
+  color:rgb(108,117,125);
+
+  padding:10px 20px;
+
+  border-radius:6px;
+
+  border:1px solid rgb(108,117,125);
+}
+
+.bootstrap-primary:hover{
+
+  background:rgb(99,60,156);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(121, 82, 179, 0.023);
+}
+
+.bootstrap-secondary:hover{
+
+  background:rgb(240,240,240);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(255, 255, 255, 0.034);
+}
+
+/* LINKEDIN */
+
+.linkedin-apply{
+  background:rgb(10,102,194);
+
+  color:white;
+
+  padding:10px 30px;
+
+  border-radius:20px;
+
+  margin-right:10px;
+}
+
+.linkedin-save{
+  background:white;
+
+  color:rgb(10,102,194);
+
+  padding:10px 20px;
+
+  border-radius:20px;
+
+  border:1px solid rgb(10,102,194);
+}
+
+.linkedin-apply:hover{
+
+  background:rgb(8,84,158);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(10, 102, 194, 0.038);
+}
+
+.linkedin-save:hover{
+
+  background:rgba(10,102,194,0.1);
+
+  transform:translateY(-px);
+
+  box-shadow:
+  0 10px 25px rgba(10, 102, 194, 0.03);
+}
+
+/* PAGINATION */
+
+.pagination{
+
+    position:absolute;
+
+    bottom:30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:12px;
+
+    z-index:20;
+}
+
+.page{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.15);
+
+    color:white;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    backdrop-filter:blur(5px);
+
+    text-decoration:none;
+}
+
+.page:hover{
+
+    transform:translateY(-3px);
+
+    background:gold;
+    color:black;
+
+    box-shadow:
+    0 8px 20px rgba(255,215,0,0.45);
+}
+
+/* ACTIVE PAGE = PAGE 3 */
+
+.active{
+
+    background:gold;
+    color:black;
+
+    box-shadow:
+    0 8px 20px rgba(255,215,0,0.45);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- MAIN CONTAINER -->
+
+<div class="container">
+
+  <h1>CSS BASIC</h1>
+
+  <div class="subtitle">
+    Button Library
+  </div>
+
+  <!-- UBER -->
+
+  <div class="section">
+
+    <button class="uber">
+      Request now
+    </button>
+
+  </div>
+
+  <!-- AMAZON -->
+
+  <div class="section">
+
+    <button class="amazon">
+      Add to Cart
+    </button>
+
+  </div>
+
+  <!-- GITHUB -->
+
+  <div class="section">
+
+    <button class="github">
+      Sign up
+    </button>
+
+  </div>
+
+  <!-- BOOTSTRAP -->
+
+  <div class="section">
+
+    <button class="bootstrap-primary">
+      Get started
+    </button>
+
+    <button class="bootstrap-secondary">
+      Download
+    </button>
+
+  </div>
+
+  <!-- LINKEDIN -->
+
+  <div class="section">
+
+    <button class="linkedin-apply">
+      Apply on company website
+    </button>
+
+    <button class="linkedin-save">
+      Save
+    </button>
+
+  </div>
+
+</div>
+
+<!-- WORKING PAGINATION -->
+
+<div class="pagination">
+
+    <!-- PAGE 1 -->
+    <a href="hero-page.html" class="page">
+        1
+    </a>
+
+    <!-- PAGE 2 -->
+    <a href="treasury.html" class="page">
+        2
+    </a>
+
+    <!-- PAGE 3 -->
+    <a href="button-library.html" class="page active">
+        3
+    </a>
+
+    <!-- PAGE 4 -->
+    <a href="css-act3.html" class="page">
+        4
+    </a>
+
+    <!-- PAGE 5 -->
+    <a href="last-page.html" class="page">
+        5
+    </a>
+
+</div>
+
+</body>
+</html>

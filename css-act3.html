@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS HOVER, SHADOW AND TRANSITION</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("mugiwaras.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* WRAPPER */
+
+.wrapper{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px 20px 80px;
+}
+
+/* GLASS CARD */
+
+.card{
+
+    width:430px;
+
+    padding:28px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:0 8px 30px rgba(0,0,0,0.45);
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.title h1{
+
+    color:#ffe16a;
+
+    font-size:42px;
+    font-weight:800;
+
+    line-height:1;
+
+    margin-bottom:10px;
+}
+
+.title p{
+
+    color:#f0cfcf;
+
+    font-size:12px;
+    letter-spacing:5px;
+}
+
+/* GROUP */
+
+.group{
+    margin-bottom:20px;
+}
+
+.label{
+
+    color:#e7c9c9;
+
+    font-size:12px;
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+/* BUTTONS */
+
+.btn{
+    border:none;
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* UBER */
+
+.uber{
+
+    width:100%;
+
+    padding:15px;
+
+    background:white;
+    color:#111;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.uber:hover{
+
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:
+    0 10px 25px rgb(255, 255, 255);
+}
+
+/* AMAZON */
+
+.amazon{
+
+    background:#ffd814;
+    color:black;
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.amazon:hover{
+
+    background:#ffcc00;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(255, 216, 20);
+}
+
+/* GITHUB */
+
+.github{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#34a853;
+    color:white;
+
+    border-radius:8px;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.github:hover{
+
+    background:#2f974c;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(52, 168, 83);
+}
+
+/* BOOTSTRAP */
+
+.bootstrap-container{
+    display:flex;
+    gap:12px;
+}
+
+.bootstrap1{
+
+    flex:1;
+
+    padding:14px;
+
+    background:#7a55d2;
+    color:white;
+
+    border-radius:6px;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.bootstrap1:hover{
+
+    background:#6c48c3;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(123, 85, 210);
+}
+
+.bootstrap2{
+
+    flex:1;
+
+    padding:14px;
+
+    background:transparent;
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    border-radius:6px;
+
+    font-size:15px;
+    font-weight:600;
+}
+
+.bootstrap2:hover{
+
+    background:rgba(255,255,255,0.10);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(255, 255, 255);
+}
+
+/* LINKEDIN */
+
+.linkedin-container{
+    display:flex;
+    gap:12px;
+}
+
+.linkedin1{
+
+    flex:2;
+
+    padding:14px;
+
+    background:#0a66c2;
+    color:white;
+
+    border-radius:40px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.linkedin1:hover{
+
+    background:#0958a5;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(10, 102, 194);
+}
+
+.linkedin2{
+
+    flex:1;
+
+    padding:14px;
+
+    background:transparent;
+    color:#0a66c2;
+
+    border:1px solid #0a66c2;
+
+    border-radius:40px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.linkedin2:hover{
+
+    background:rgba(10,102,194,0.12);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgb(10, 102, 194);
+}
+
+/* PAGINATION */
+
+.pagination{
+
+    margin-top:18px;
+
+    display:flex;
+    gap:10px;
+}
+
+/* CLICKABLE PAGE BUTTONS */
+
+.page{
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.15);
+
+    color:white;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    text-decoration:none;
+}
+
+.page:hover{
+
+    background:#ffd814;
+    color:black;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 20px rgba(255,216,20,0.4);
+}
+
+/* ACTIVE PAGE = PAGE 4 */
+
+.active{
+    background:#ffd814;
+    color:black;
+
+    box-shadow:
+    0 8px 20px rgba(255,216,20,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- CARD -->
+
+    <div class="card">
+
+        <!-- TITLE -->
+
+        <div class="title">
+
+            <h1>CSS BASIC</h1>
+
+            <p>BUTTON LIBRARY</p>
+
+        </div>
+
+        <!-- UBER -->
+
+        <div class="group">
+
+            <div class="label">UBER</div>
+
+            <button class="btn uber">
+                Request now
+            </button>
+
+        </div>
+
+        <!-- AMAZON -->
+
+        <div class="group">
+
+            <div class="label">AMAZON</div>
+
+            <button class="btn amazon">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <!-- GITHUB -->
+
+        <div class="group">
+
+            <div class="label">GITHUB</div>
+
+            <button class="btn github">
+                Sign up
+            </button>
+
+        </div>
+
+        <!-- BOOTSTRAP -->
+
+        <div class="group">
+
+            <div class="label">BOOTSTRAP</div>
+
+            <div class="bootstrap-container">
+
+                <button class="btn bootstrap1">
+                    Get started
+                </button>
+
+                <button class="btn bootstrap2">
+                    Download
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- LINKEDIN -->
+
+        <div class="group">
+
+            <div class="label">LINKEDIN</div>
+
+            <div class="linkedin-container">
+
+                <button class="btn linkedin1">
+                    Apply on company website
+                </button>
+
+                <button class="btn linkedin2">
+                    Save
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+
+    <div class="pagination">
+
+        <!-- PAGE 1 -->
+        <a href="hero-page.html" class="page">1</a>
+
+        <!-- PAGE 2 -->
+        <a href="treasury.html" class="page">2</a>
+
+        <!-- PAGE 3 -->
+        <a href="button-library.html" class="page">3</a>
+
+        <!-- PAGE 4 (CURRENT PAGE) -->
+        <a href="css-act3.html" class="page active">4</a>
+
+         <!-- PAGE 5 -->
+        <a href="last-page.html" class="page">5</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

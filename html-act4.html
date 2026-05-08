@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE GRAND LINE</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png.png">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("nakama.gif");
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* TOP LEFT */
+
+.top-left{
+    position:absolute;
+    top:40px;
+    left:50px;
+
+    color:white;
+    font-size:18px;
+    font-weight:600;
+
+    opacity:0.9;
+}
+
+/* TOP RIGHT */
+
+.top-right{
+    position:absolute;
+    top:40px;
+    right:50px;
+
+    text-align:right;
+}
+
+.news{
+    color:#ffd500;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+}
+
+.signal{
+    color:white;
+    font-size:16px;
+    font-weight:600;
+
+    opacity:0.9;
+}
+
+/* CENTER CONTENT */
+
+.content{
+    z-index:2;
+}
+
+.content h1{
+    color:#ffd500;
+
+    font-size:110px;
+    font-weight:800;
+
+    letter-spacing:8px;
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+.content p{
+    color:white;
+
+    font-size:22px;
+    font-weight:600;
+
+    line-height:1.5;
+
+    margin-bottom:35px;
+
+    text-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+/* AUDIO */
+
+audio{
+    margin-bottom:40px;
+
+    width:360px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    background:#ffd500;
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:700;
+    letter-spacing:6px;
+
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(255,213,0,0.7);
+}
+
+/* BOTTOM RIGHT */
+
+.bottom-right{
+    position:absolute;
+
+    bottom:40px;
+    right:50px;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:600;
+
+    opacity:0.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- TOP LEFT -->
+
+    <div class="top-left">
+        Vessel: Thousand Sunny
+    </div>
+
+    <!-- TOP RIGHT -->
+
+    <div class="top-right">
+
+        <div class="news">
+            BIG NEWS: THE STRAW HAT PIRATES SHAKE THE WORLD AGAIN • SET SAIL
+        </div>
+
+        <div class="signal">
+            Signal: Den Den Mushi Pulse [Stable]
+        </div>
+
+    </div>
+
+    <!-- CENTER CONTENT -->
+
+    <div class="content">
+
+        <h1>THE GRAND LINE</h1>
+
+        <p>
+            The crew’s legacy echoes across the seas.<br>
+            Memories guide the path forward.
+        </p>
+
+        <!-- AUDIO -->
+
+        <audio controls autoplay loop>
+            <source src="memories.mp3.mp3" type="audio/mp3">
+        </audio>
+
+        <br>
+
+        <!-- WORKING BUTTON -->
+
+        <a href="css-act3.html" class="btn">
+            SET SAIL
+        </a>
+
+    </div>
+
+    <!-- BOTTOM RIGHT -->
+
+    <div class="bottom-right">
+        Current Arc: The New World
+    </div>
+
+</section>
+
+</body>
+</html>
